@@ -21,13 +21,13 @@ class CarmichaelNumber:
       print("le nombre premier de Mersenne de numéro {} est associé au nombre premier {} et contient {} chiffres".format(number, prime, len(str(mersenne))))
       print("il vaut : ", mersenne)
       print()
-    while len(listMersennePrimes) <= numberOfMersennePrimes:
+    while len(listMersennePrimes) < numberOfMersennePrimes:
       prime, mersenne = self.__computeNextMersennePrime()
       listMersennePrimes.append((len(listMersennePrimes), prime, mersenne))
       print("le nombre premier de Mersenne de numéro {} est associé au nombre premier {} et contient {} chiffres".format(len(listMersennePrimes), prime, len(str(mersenne))))
       print("il vaut : ", mersenne)
       print()
-    print("delay is {} sec for {} Mersenne prime numbers".format('{:.2f}'.format(time.time() - start)), str(numberOfMersennePrimes))
+    print("delay is {} sec for {} Mersenne prime numbers".format('{:.2f}'.format(time.time() - start), str(numberOfMersennePrimes)))
       
     
   def __computeNextMersennePrime(self):
@@ -106,9 +106,9 @@ class CarmichaelNumber:
 
 
 object = CarmichaelNumber()
-# object.computeBigMersenne(21)
-mersenne = object.testLucasLhemer(44497, 2 ** 44497 - 1)
-if mersenne:
-  print("le nombre premier de Mersenne de numéro 27 est associé au nombre premier 44497 et contient {} chiffres".format(len(str(2 ** 44497 - 1))))
-  print("il vaut : ", 2 ** 44497 - 1)
-  print()
+object.computeBigMersenne(20)
+# mersenne = object.testLucasLhemer(44497, 2 ** 44497 - 1)
+# if mersenne:
+#   print("le nombre premier de Mersenne de numéro 27 est associé au nombre premier 44497 et contient {} chiffres".format(len(str(2 ** 44497 - 1))))
+#   print("il vaut : ", 2 ** 44497 - 1)
+#   print()
